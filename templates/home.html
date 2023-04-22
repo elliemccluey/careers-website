@@ -8,14 +8,20 @@
   </head>
   <body>
     <div class="container">
-    <h1 class="text-center mt-2 mb-4">AXLE Careers</h1>
+    <h1 class="text-center mt-2 mb-4">
+      {{company_name}} Careers
+    </h1>
     <img class="img-fluid" id="banner" src="https://careers-website.elliemccluey.repl.co/static/banner.jpeg">
     <h2 class="text-center">About AXLE</h2>
     <p class="lead">
       AXLE is a careers center focusing on transforming 21st century humans into 210th century aliens.
     </p>
     <h2 class="text-center mt-2 mb-4">Open Positions</h2>
-      <p>Software Engineer: San Francisco, CA</p>
+      <div>
+        {% for job in jobs %}
+          {% include 'jobitem.html' %}
+        {% endfor %}
+      </div>
       <div style="text-align:center";>
     <button class="btn btn-primary btn-lg">Contact Us</button>
         <p class="mt-4">Copyright 2023, AXLE</p>
